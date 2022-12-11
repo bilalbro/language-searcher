@@ -1,0 +1,169 @@
+body, input {
+   font-family: 'Jetbrains Mono';
+}
+
+body {
+   margin: 100px 0;
+   background-color: #e5e4ff;
+   text-align: center;
+}
+
+h1 {
+   text-transform: capitalize;
+}
+
+.input {
+   background-color: #ffffff;
+   color: black;
+   border-radius: 10px;
+   font-size: 18px;
+   outline: none;
+   border: 2px solid transparent;
+   padding: 20px;
+   display: inline-block;
+   width: 60%;
+   box-sizing: border-box;
+}
+
+.input:focus {
+   border-color: #ddd;
+   box-shadow: 0 20px 50px -10px #ccc;
+}
+
+.radios > label {
+   margin: 20px;
+   display: inline-block;
+}
+
+.languages {
+   margin: 50px 0;
+   width: calc(60% + 10px);
+   display: inline-block;
+}
+
+.languages > p {
+   font-size: 20px;
+}
+
+.language-list {
+   list-style: none;
+   padding: 0;
+}
+
+.language {
+   float: left;
+   width: calc(100% / 4);
+   padding: 5px;
+   box-sizing: border-box;
+   position: relative;
+   cursor: pointer;
+}
+
+.language:hover .language_inner {
+   background-color: #fafafa;
+   outline: 2px solid skyblue;
+}
+
+.language:hover:before {
+   transition: 0.2s 0.2s linear;
+   opacity: 1;
+   visibility: visible;
+}
+
+.language:before {
+   position: absolute;
+   content: attr(data-title);
+   background-color: #333;
+   font-size: 12px;
+   border-radius: 4px;
+   padding: 5px;
+   color: white;
+   width: max-content;
+   top: 10px;
+   left: 10px;
+   z-index: 100;
+   visibility: hidden;
+   opacity: 0;
+}
+
+.language_inner {
+   background-color: #fff;
+   height: 150px;
+   line-height: 150px;
+   border-radius: 10px;
+   font-size: 18px;
+   padding: 20px;
+}
+
+.language_text {
+   line-height: 1.2em;
+   display: inline-block;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   width: 100%;
+   vertical-align: middle;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+
+.input {
+   width: 80%;
+}
+   
+.languages {
+   width: calc(80% + 10px);
+}
+
+.language {
+   width: calc(100% / 3);
+}
+
+.language_inner {
+   height: 120px;
+   line-height: 120px;
+}
+
+}
+
+
+
+@media screen and (max-width: 960px) {
+
+.language {
+   width: calc(100% / 2);
+}
+
+}
+
+
+
+
+@media screen and (max-width: 640px) {
+
+body {
+   margin: 100px 20px
+}
+
+.input {
+   font-size: 16px;
+   width: 100%;
+}
+    
+.languages {
+   width: 100%;
+}
+
+.language {
+   width: 100%;
+   padding: 0;
+   margin-top: 10px
+}
+
+.language_inner {
+   height: 100px;
+   line-height: 100px;
+}
+
+}
